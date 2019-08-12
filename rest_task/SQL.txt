@@ -1,0 +1,37 @@
+CREATE DATABASE IF NOT EXISTS `books_db` CHARACTER SET `utf8` COLLATE `utf8_unicode_ci`;
+
+
+CREATE TABLE IF NOT EXISTS `books_db`.`books`(
+    `id_book` INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    `title` VARCHAR(100) NOT NULL,
+    `description` VARCHAR(255) NOT NULL,
+    `genre` VARCHAR(255) NOT NULL,
+    `auth_first_name` VARCHAR(100) NOT NULL,
+    `auth_last_name` VARCHAR(100) NOT NULL
+);
+
+INSERT INTO `books` (
+	`id_book`, 
+	`title`, 
+	`description`, 
+	`genre`, 
+	`auth_first_name`, 
+	`auth_last_name`
+) 
+VALUES 
+(
+	NULL, 
+	'From Japan like to Japan', 
+	'This book is a story about the adventures of an bulgarian writer that goes to Japan and experiences their culture', 
+	'Documentry', 
+	'Marko', 
+	'Semov'
+), 
+(
+	NULL, 
+	'Some book', 
+	'Some description', 
+	'Sci-Fy', 
+	'First', 
+	'Last'
+)
